@@ -1,0 +1,15 @@
+---
+layout: layout.html
+---
+<main>
+    <h1>Hello World</h1>
+  {{ posts | dump }}
+
+  {% for post in posts %}
+	<article>
+		<h1>{{ post.fields.title }}</h1>
+		<time>{{ post.fields.publishDate }}</time>
+		<a href="/posts/{{ post.fields.title | slug }}">Read the post</a>
+	</article>
+{% endfor %}
+</main> 

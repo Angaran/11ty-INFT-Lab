@@ -1,0 +1,13 @@
+---
+layout: layout.html
+pagination:
+    data: posts
+    size: 1
+    alias: post
+permalink:  "posts/{{ post.fields.title | slug }}/index.html"
+eleventyComputed: 
+    title: "{{ post.fields.title }}"
+---
+<h2>{{title}}
+    <h2>
+<p>{{content | safe }}</p>
